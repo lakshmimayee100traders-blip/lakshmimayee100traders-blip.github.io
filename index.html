@@ -15,7 +15,7 @@ padding:20px;
 }
 
 .slider{
-width:100%;
+position:relative;
 height:250px;
 overflow:hidden;
 }
@@ -24,13 +24,21 @@ overflow:hidden;
 width:100%;
 height:250px;
 object-fit:cover;
+position:absolute;
+opacity:0;
 animation:slide 9s infinite;
 }
 
+.slider img:nth-child(1){animation-delay:0s;}
+.slider img:nth-child(2){animation-delay:3s;}
+.slider img:nth-child(3){animation-delay:6s;}
+
 @keyframes slide{
-0%{opacity:1;}
-33%{opacity:0;}
-66%{opacity:1;}
+0%{opacity:0;}
+10%{opacity:1;}
+30%{opacity:1;}
+40%{opacity:0;}
+100%{opacity:0;}
 }
 
 section{padding:20px;}
@@ -86,9 +94,9 @@ margin-top:20px;
 </header>
 
 <div class="slider">
-<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0">
+<img src="images/shop1.jpg">
+<img src="images/shop2.jpg">
+<img src="images/shop3.jpg">
 </div>
 
 <section>
@@ -104,7 +112,7 @@ margin-top:20px;
 <h2>Order Now</h2>
 
 <button class="button whatsapp"
-onclick="window.location.href='https://wa.me/918388929880?text=Hello Lakshmimayee Traders, I want to order.'">
+onclick="window.location.href='https://wa.me/918388929880?text=Hello Lakshmimayee Traders, I want to order building materials.'">
 WhatsApp Order
 </button>
 
